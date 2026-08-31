@@ -1,0 +1,118 @@
+:root {
+    --bg-color: #f8fafc;
+    --panel-bg: #ffffff;
+    --stroke-dark: #0f172a;
+    --pad-bg: #e2e8f0;
+    --pad-active: #ffde59;
+    --text-dark: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-container {
+    background-color: var(--panel-bg);
+    padding: 28px;
+    border-radius: 24px;
+    border: 3px solid var(--stroke-dark);
+    box-shadow: 8px 8px 0px var(--stroke-dark);
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.app-header {
+    text-align: center;
+}
+
+.app-header h1 {
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+.app-header p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+/* --- GRID DRUM PAD --- */
+.pad-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.pad-btn {
+    background-color: var(--pad-bg);
+    border: 3px solid var(--stroke-dark);
+    border-radius: 16px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--stroke-dark);
+    transition: transform 0.05s ease, background-color 0.1s ease, box-shadow 0.05s ease;
+    user-select: none;
+}
+
+.pad-btn:active,
+.pad-btn.active {
+    background-color: var(--pad-active);
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0px var(--stroke-dark);
+}
+
+.pad-key {
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.pad-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+}
+
+/* --- INFO DISPLAY --- */
+.display-info {
+    text-align: center;
+    background-color: #f1f5f9;
+    padding: 10px;
+    border: 2px solid var(--stroke-dark);
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+#sound-display {
+    color: #2563eb;
+    text-transform: uppercase;
+}
+
+/* Responsive Tablet/Mobile */
+@media (max-width: 480px) {
+    .pad-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
