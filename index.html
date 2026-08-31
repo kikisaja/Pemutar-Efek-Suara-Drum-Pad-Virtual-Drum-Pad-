@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Drum Pad 🥁</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Header Aplikasi -->
+        <header class="app-header">
+            <h1>🥁 VIRTUAL DRUM PAD</h1>
+            <p>Tekan tombol pada layar atau gunakan keyboard (A-K) untuk memainkan ritme!</p>
+        </header>
+
+        <!-- Grid Pad Drum -->
+        <div class="pad-grid" id="pad-grid">
+            <!-- Elemen Pad diinjeksi via JavaScript / Struktur HTML Statis -->
+            <button class="pad-btn" data-key="A" data-sound="kick">
+                <span class="pad-key">A</span>
+                <span class="pad-label">Kick</span>
+            </button>
+            <button class="pad-btn" data-key="S" data-sound="snare">
+                <span class="pad-key">S</span>
+                <span class="pad-label">Snare</span>
+            </button>
+            <button class="pad-btn" data-key="D" data-sound="hihat">
+                <span class="pad-key">D</span>
+                <span class="pad-label">Hi-Hat</span>
+            </button>
+            <button class="pad-btn" data-key="F" data-sound="openhat">
+                <span class="pad-key">F</span>
+                <span class="pad-label">Open Hat</span>
+            </button>
+            <button class="pad-btn" data-key="G" data-sound="tom1">
+                <span class="pad-key">G</span>
+                <span class="pad-label">Tom High</span>
+            </button>
+            <button class="pad-btn" data-key="H" data-sound="tom2">
+                <span class="pad-key">H</span>
+                <span class="pad-label">Tom Low</span>
+            </button>
+            <button class="pad-btn" data-key="J" data-sound="crash">
+                <span class="pad-key">J</span>
+                <span class="pad-label">Crash</span>
+            </button>
+            <button class="pad-btn" data-key="K" data-sound="clap">
+                <span class="pad-key">K</span>
+                <span class="pad-label">Clap</span>
+            </button>
+        </div>
+
+        <!-- Info Log Terakhir -->
+        <div class="display-info">
+            <span>Suara Terakhir: </span>
+            <strong id="sound-display">-</strong>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
